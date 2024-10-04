@@ -1,0 +1,247 @@
+/*
+Autor: Gabriel De Oliveira Matoso
+Nome do Aluno: Gabriel De Oliveira Matoso 
+R.A: 48629
+Instituição: Unifatecie
+Disciplina: DESENVOLVIMENTO FRONT-END
+*/
+
+@charset "UTF-8"; /* Define o conjunto de caracteres como UTF-8 */
+
+/* Estilos gerais do corpo */
+body {
+  margin: 0; /* Remove margens */
+  height: 100%; /* Define a altura do corpo como 100% */
+  overflow: hidden; /* Remove rolagem */
+  width: 100% !important; /* Define a largura como 100% */
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura/altura */
+  font-family: "Roboto", sans-serif; /* Define a fonte do texto */
+}
+
+/* Estilos para o lado direito */
+.backRight {
+  position: absolute; /* Define a posição como absoluta */
+  right: 0; /* Alinha à direita */
+  width: 50%; /* Define a largura como 50% */
+  height: 100%; /* Define a altura como 100% */
+  background: #03A9F4; /* Define a cor de fundo */
+}
+
+/* Estilos para o lado esquerdo */
+.backLeft {
+  position: absolute; /* Define a posição como absoluta */
+  left: 0; /* Alinha à esquerda */
+  width: 50%; /* Define a largura como 50% */
+  height: 100%; /* Define a altura como 100% */
+  background: #3ab74b; /* Define a cor de fundo */
+}
+
+/* Estilos de fundo */
+#back {
+  width: 100%; /* Define a largura como 100% */
+  height: 100%; /* Define a altura como 100% */
+  position: absolute; /* Define a posição como absoluta */
+  z-index: -999; /* Coloca o fundo atrás de outros elementos */
+}
+
+/* Estilos para a camada de canvas */
+.canvas-back {
+  position: absolute; /* Define a posição como absoluta */
+  top: 0; /* Alinha ao topo */
+  left: 0; /* Alinha à esquerda */
+  width: 100%; /* Define a largura como 100% */
+  height: 100%; /* Define a altura como 100% */
+  z-index: 10; /* Coloca a camada acima do fundo */
+}
+
+/* Estilos para a caixa deslizante */
+#slideBox {
+  width: 50%; /* Define a largura como 50% */
+  max-height: 100%; /* Define a altura máxima como 100% */
+  height: 100%; /* Define a altura como 100% */
+  overflow: hidden; /* Remove rolagem */
+  margin-left: 50%; /* Alinha à esquerda */
+  position: absolute; /* Define a posição como absoluta */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); /* Sombra da caixa */
+}
+
+/* Estilos para a camada superior */
+.topLayer {
+  width: 200%; /* Define a largura como 200% */
+  height: 100%; /* Define a altura como 100% */
+  position: relative; /* Define a posição como relativa */
+  left: 0; /* Alinha à esquerda */
+  left: -100%; /* Move para a esquerda */
+}
+
+/* Estilos para rótulos */
+label {
+  font-size: 0.8em; /* Define o tamanho da fonte */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+}
+
+/* Estilos para entradas de texto */
+input {
+  background-color: transparent; /* Fundo transparente */
+  border: 0; /* Remove bordas */
+  outline: 0; /* Remove contorno */
+  font-size: 1em; /* Define o tamanho da fonte */
+  padding: 8px 1px; /* Padding interno */
+  margin-top: 0.1em; /* Margem superior */
+}
+
+/* Estilos para o lado esquerdo */
+.left {
+  width: 50%; /* Define a largura como 50% */
+  height: 100%; /* Define a altura como 100% */
+  overflow: scroll; /* Permite rolagem */
+  background: #ffffff; /* Cor de fundo */
+  left: 0; /* Alinha à esquerda */
+  position: absolute; /* Define a posição como absoluta */
+}
+
+.left label {
+  color: #000000; /* Cor do texto do rótulo */
+}
+
+.left input {
+  border-bottom: 1px solid #e3e3e3; /* Bordas inferiores */
+  color: #e3e3e3; /* Cor do texto */
+}
+
+.left input:focus,
+.left input:active {
+  border-color: #03A9F4; /* Cor da borda ao focar */
+  color: #03A9F4; /* Cor do texto ao focar */
+}
+
+.left input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #2C3034 inset; /* Estilo para preenchimento automático */
+  -webkit-text-fill-color: #e3e3e3; /* Cor do texto */
+}
+
+.left a {
+  color: #03A9F4; /* Cor dos links */
+}
+
+/* Estilos para o lado direito */
+.right {
+  width: 50%; /* Define a largura como 50% */
+  height: 100%; /* Define a altura como 100% */
+  overflow: scroll; /* Permite rolagem */
+  background: #f9f9f9; /* Cor de fundo */
+  right: 0; /* Alinha à direita */
+  position: absolute; /* Define a posição como absoluta */
+}
+
+.right label {
+  color: #212121; /* Cor do texto do rótulo */
+}
+
+.right input {
+  border-bottom: 1px solid #212121; /* Bordas inferiores */
+}
+
+.right input:focus,
+.right input:active {
+  border-color: #3ab764; /* Cor da borda ao focar */
+}
+
+.right input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #f9f9f9 inset; /* Estilo para preenchimento automático */
+  -webkit-text-fill-color: #212121; /* Cor do texto */
+}
+
+/* Estilos para o conteúdo */
+.content {
+  display: flex; /* Exibe como flexbox */
+  flex-direction: column; /* Alinha itens em coluna */
+  justify-content: center; /* Centraliza verticalmente */
+  min-height: 100%; /* Define altura mínima */
+  width: 80%; /* Define a largura como 80% */
+  margin: 0 auto; /* Centraliza horizontalmente */
+  position: relative; /* Define a posição como relativa */
+}
+
+.content h2 {
+  font-weight: 300; /* Define o peso da fonte */
+  font-size: 2.6em; /* Define o tamanho da fonte */
+  margin: 0.2em 0 0.1em; /* Margens ao redor do título */
+}
+
+.left .content h2 {
+  color: #03A9F4; /* Cor do título no lado esquerdo */
+}
+
+.right .content h2 {
+  color: #673AB7; /* Cor do título no lado direito */
+}
+
+/* Estilos para elementos de formulário */
+.form-element {
+  margin: 1.6em 0; /* Margens ao redor dos elementos de formulário */
+}
+
+.form-element.form-submit {
+  margin: 1.6em 0 0; /* Margem para o botão de envio */
+}
+
+/* Estilos para pilha de formulários */
+.form-stack {
+  display: flex; /* Exibe como flexbox */
+  flex-direction: column; /* Alinha itens em coluna */
+}
+
+/* Estilos para caixas de seleção */
+.checkbox {
+  -webkit-appearance: none; /* Remove estilo padrão */
+  outline: none; /* Remove contorno */
+  background-color: #e3e3e3; /* Cor de fundo */
+  border: 1px solid #e3e3e3; /* Bordas */
+  box-shadow: 0 1px 2px rgba(238, 236, 236, 0.05), inset 0px -15px 10px -12px rgba(255, 255, 255, 0.05); /* Sombra */
+  padding: 12px; /* Padding interno */
+  border-radius: 4px; /* Bordas arredondadas */
+  display: inline-block; /* Exibe como bloco em linha */
+  position: relative; /* Define a posição como relativa */
+}
+
+.checkbox:focus,
+.checkbox:checked:focus,
+.checkbox:active,
+.checkbox:checked:active {
+  border-color: #03A9F4; /* Cor da borda ao focar ou ativar */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ao focar */
+}
+
+.checkbox:checked {
+  outline: none; /* Remove contorno */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ao ativar */
+  background: #03A9F4; /* Cor de fundo ao ativar */
+}
+
+/* Estilos para botões */
+button {
+  background: #03A9F4; /* Cor de fundo */
+  border: none; /* Remove bordas */
+  border-radius: 4px; /* Bordas arredondadas */
+  color: white; /* Cor do texto */
+  cursor: pointer; /* Cursor em forma de mão */
+  font-size: 1.2em; /* Tamanho da fonte */
+  padding: 12px; /* Padding interno */
+  width: 100%; /* Largura total */
+  margin-top: 1em; /* Margem superior */
+  transition: background 0.2s ease; /* Transição suave para o fundo */
+}
+
+/* Estilos para botões ao passar o mouse */
+button:hover {
+  background: #f9f9f9; /* Cor de fundo ao passar o mouse */
+  color: #03A9F4; /* Cor do texto ao passar o mouse */
+}
+
+/* Estilos para divs */
+.divForm {
+  border: 1px solid #e3e3e3; /* Bordas */
+  padding: 1.5em; /* Padding interno */
+  border-radius: 4px; /* Bordas arredondadas */
+}

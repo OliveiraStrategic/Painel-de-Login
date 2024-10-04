@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,600' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <title>Documento</title>
+</head>
+<body>
+    <!-- Informações do Aluno -->
+    <div style="display:none;">
+        Nome do Aluno: Gabriel De Oliveira Matoso<br>
+        R.A: 48629<br>
+        Instituição: Unifatecie<br>
+        Disciplina: DESENVOLVIMENTO FRONT-END
+    </div>
+
+    <div id="back">
+        <canvas id="canvas" class="canvas-back"></canvas>
+        <div class="backRight">    
+        </div>
+        <div class="backLeft">
+        </div>
+    </div>
+      
+    <div id="slideBox">
+        <div class="topLayer">
+            <div class="left">
+                <div class="content">
+                    <h2>Criar Conta</h2>
+                    <form id="form-signup" method="post" onsubmit="return false;">
+                        <div class="form-element form-stack">
+                            <label for="email" class="form-label">Email</label>
+                            <input id="email" type="email" name="email" required>
+                        </div>
+                        <div class="form-element form-stack">
+                            <label for="username-signup" class="form-label">Nome de Usuário</label>
+                            <input id="username-signup" type="text" name="username" required>
+                        </div>
+                        <div class="form-element form-stack">
+                            <label for="password-signup" class="form-label">Senha</label>
+                            <input id="password-signup" type="password" name="password" required>
+                        </div>
+                        <div class="form-element form-checkbox">
+                            <input id="confirm-terms" type="checkbox" name="confirm" value="yes" class="checkbox" required>
+                            <label for="confirm-terms">Eu concordo com os <a href="#">Termos de Serviço</a> e a <a href="#">Política de Privacidade</a></label>
+                        </div>
+                        <div class="form-element form-submit">
+                            <button id="signUp" class="signup" type="submit" name="signup">Criar Conta</button>
+                            <button id="goLeft" class="signup off">Fazer Login</button> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="right">
+                <div class="content">
+                    <h2>Fazer Login</h2>
+                    <form id="form-login" method="post" onsubmit="return false;">
+                        <div class="form-element form-stack">
+                            <label for="username-login" class="form-label">Nome de Usuário</label>
+                            <input id="username-login" type="text" name="username" required>
+                        </div>
+                        <div class="form-element form-stack">
+                            <label for="password-login" class="form-label">Senha</label>
+                            <input id="password-login" type="password" name="password" required>
+                        </div>
+                        <div class="form-element form-submit">
+                            <button id="logIn" class="login" type="submit" name="login">Fazer Login</button>
+                            <button id="goRight" class="login off" name="signup">Criar Conta</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.11.3/paper-full.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
